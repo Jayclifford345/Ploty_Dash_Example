@@ -83,7 +83,7 @@ def generate_graphs(n):
 
 
 def getData(bucket, measurment, field) -> DataFrame:
-        query = open("../flux/graph.flux").read().format(bucket, measurment, field)
+        query = open("flux/graph.flux").read().format(bucket, measurment, field)
         result = query_api.query_data_frame(query)
         return result
 
